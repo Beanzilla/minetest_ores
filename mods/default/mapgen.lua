@@ -39,6 +39,7 @@ minetest.register_alias("mapgen_stair_desert_stone", "stairs:stair_desert_stone"
 
 --
 -- Register ores
+-- This is modified to increase amounts and size and reduce scarcity
 --
 
 -- Mgv6
@@ -47,6 +48,7 @@ function default.register_mgv6_ores()
 
 	-- Blob ore
 	-- These first to avoid other ores in blobs
+	-- And this means we skip all this down to "Scatter Ores"
 
 	-- Clay
 	-- This first to avoid clay in sand blobs
@@ -134,6 +136,7 @@ function default.register_mgv6_ores()
 	})
 
 	-- Scatter ores
+	-- Modified Scarcity, Number of Ores and Size
 
 	-- Coal
 
@@ -141,9 +144,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
-		clust_scarcity = 8 * 8 * 8,
-		clust_num_ores = 9,
-		clust_size     = 3,
+		clust_scarcity = 7 * 7 * 7, -- 8*8*8
+		clust_num_ores = 10, -- 9
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -152,9 +155,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
-		clust_scarcity = 8 * 8 * 8,
-		clust_num_ores = 8,
-		clust_size     = 3,
+		clust_scarcity = 7 * 7 * 7, -- 8*8*8
+		clust_num_ores = 10, -- 8
+		clust_size     = 6, -- 3
 		y_max          = 64,
 		y_min          = -31000,
 	})
@@ -163,9 +166,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
-		clust_scarcity = 24 * 24 * 24,
-		clust_num_ores = 27,
-		clust_size     = 6,
+		clust_scarcity = 19 * 19 * 19, -- 24*24*24
+		clust_num_ores = 20, -- 27
+		clust_size     = 8, -- 6
 		y_max          = 0,
 		y_min          = -31000,
 	})
@@ -176,9 +179,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
-		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 12,
-		clust_size     = 3,
+		clust_scarcity = 8 * 8 * 8, -- 9*9*9
+		clust_num_ores = 13, -- 12
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -187,9 +190,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
-		clust_scarcity = 7 * 7 * 7,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_scarcity = 6 * 6 * 6, -- 7*7*7
+		clust_num_ores = 8, -- 5
+		clust_size     = 6, -- 3
 		y_max          = 0,
 		y_min          = -31000,
 	})
@@ -198,9 +201,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_iron",
 		wherein        = "default:stone",
-		clust_scarcity = 24 * 24 * 24,
-		clust_num_ores = 27,
-		clust_size     = 6,
+		clust_scarcity = 20 * 20 * 20, -- 24*24*24
+		clust_num_ores = 20, -- 27
+		clust_size     = 8, -- 6
 		y_max          = -64,
 		y_min          = -31000,
 	})
@@ -211,9 +214,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_copper",
 		wherein        = "default:stone",
-		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_scarcity = 8 * 8 * 8, -- 9*9*9
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -222,9 +225,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_copper",
 		wherein        = "default:stone",
-		clust_scarcity = 12 * 12 * 12,
-		clust_num_ores = 4,
-		clust_size     = 3,
+		clust_scarcity = 10 * 10 * 10, -- 12*12*12
+		clust_num_ores = 6, -- 4
+		clust_size     = 6, -- 3
 		y_max          = -16,
 		y_min          = -63,
 	})
@@ -233,9 +236,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_copper",
 		wherein        = "default:stone",
-		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_scarcity = 10 * 10 * 10, -- 9*9*9
+		clust_num_ores = 7, -- 5
+		clust_size     = 6, -- 3
 		y_max          = -64,
 		y_min          = -31000,
 	})
@@ -247,8 +250,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 10 * 10 * 10,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -258,8 +261,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 4,
-		clust_size     = 3,
+		clust_num_ores = 5, -- 4
+		clust_size     = 6, -- 3
 		y_max          = -32,
 		y_min          = -127,
 	})
@@ -269,8 +272,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 10 * 10 * 10,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = -128,
 		y_min          = -31000,
 	})
@@ -282,8 +285,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -292,9 +295,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
-		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 3,
-		clust_size     = 2,
+		clust_scarcity = 14 * 14 * 14, -- 15*15*15
+		clust_num_ores = 4, -- 3
+		clust_size     = 6, -- 2
 		y_max          = -64,
 		y_min          = -255,
 	})
@@ -304,8 +307,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = -256,
 		y_min          = -31000,
 	})
@@ -318,7 +321,7 @@ function default.register_mgv6_ores()
 		wherein        = "default:stone",
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -327,9 +330,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_mese",
 		wherein        = "default:stone",
-		clust_scarcity = 18 * 18 * 18,
-		clust_num_ores = 3,
-		clust_size     = 2,
+		clust_scarcity = 16 * 16 * 16, -- 18*18*18
+		clust_num_ores = 4, -- 3
+		clust_size     = 6, -- 2
 		y_max          = -64,
 		y_min          = -255,
 	})
@@ -340,7 +343,7 @@ function default.register_mgv6_ores()
 		wherein        = "default:stone",
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_size     = 6, -- 3
 		y_max          = -256,
 		y_min          = -31000,
 	})
@@ -352,8 +355,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 4,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 4
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -362,9 +365,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
-		clust_scarcity = 17 * 17 * 17,
-		clust_num_ores = 4,
-		clust_size     = 3,
+		clust_scarcity = 16 * 16 * 16, -- 17*17*17
+		clust_num_ores = 7, -- 4
+		clust_size     = 6, -- 3
 		y_max          = -128,
 		y_min          = -255,
 	})
@@ -374,8 +377,8 @@ function default.register_mgv6_ores()
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 4,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 4
+		clust_size     = 6, -- 3
 		y_max          = -256,
 		y_min          = -31000,
 	})
@@ -386,9 +389,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:mese",
 		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
+		clust_scarcity = 30 * 30 * 30, -- 36*36*36
+		clust_num_ores = 5, -- 3
+		clust_size     = 6, -- 2
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -397,9 +400,9 @@ function default.register_mgv6_ores()
 		ore_type       = "scatter",
 		ore            = "default:mese",
 		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
+		clust_scarcity = 28 * 28 * 28, -- 36*36*36
+		clust_num_ores = 6, -- 3
+		clust_size     = 6, -- 2
 		y_max          = -1024,
 		y_min          = -31000,
 	})
@@ -601,6 +604,7 @@ function default.register_ores()
 	})
 
 	-- Scatter ores
+	-- Modified Scarcity, Number of Ores and Size
 
 	-- Coal
 
@@ -608,9 +612,9 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
-		clust_scarcity = 8 * 8 * 8,
-		clust_num_ores = 9,
-		clust_size     = 3,
+		clust_scarcity = 7 * 7 * 7, -- 8*8*8
+		clust_num_ores = 10, -- 9
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -619,21 +623,91 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
-		clust_scarcity = 8 * 8 * 8,
-		clust_num_ores = 8,
-		clust_size     = 3,
+		clust_scarcity = 7 * 7 * 7, -- 8*8*8
+		clust_num_ores = 10, -- 8
+		clust_size     = 6, -- 3
 		y_max          = 64,
-		y_min          = -127,
+		y_min          = -31000,
 	})
 
 	minetest.register_ore({
 		ore_type       = "scatter",
 		ore            = "default:stone_with_coal",
 		wherein        = "default:stone",
-		clust_scarcity = 12 * 12 * 12,
-		clust_num_ores = 30,
-		clust_size     = 5,
-		y_max          = -128,
+		clust_scarcity = 19 * 19 * 19, -- 24*24*24
+		clust_num_ores = 20, -- 27
+		clust_size     = 8, -- 6
+		y_max          = 0,
+		y_min          = -31000,
+	})
+
+	-- Iron
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:stone_with_iron",
+		wherein        = "default:stone",
+		clust_scarcity = 8 * 8 * 8, -- 9*9*9
+		clust_num_ores = 13, -- 12
+		clust_size     = 6, -- 3
+		y_max          = 31000,
+		y_min          = 1025,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:stone_with_iron",
+		wherein        = "default:stone",
+		clust_scarcity = 6 * 6 * 6, -- 7*7*7
+		clust_num_ores = 8, -- 5
+		clust_size     = 6, -- 3
+		y_max          = 0,
+		y_min          = -31000,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:stone_with_iron",
+		wherein        = "default:stone",
+		clust_scarcity = 20 * 20 * 20, -- 24*24*24
+		clust_num_ores = 20, -- 27
+		clust_size     = 8, -- 6
+		y_max          = -64,
+		y_min          = -31000,
+	})
+
+	-- Copper
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:stone_with_copper",
+		wherein        = "default:stone",
+		clust_scarcity = 8 * 8 * 8, -- 9*9*9
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
+		y_max          = 31000,
+		y_min          = 1025,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:stone_with_copper",
+		wherein        = "default:stone",
+		clust_scarcity = 10 * 10 * 10, -- 12*12*12
+		clust_num_ores = 6, -- 4
+		clust_size     = 6, -- 3
+		y_max          = -16,
+		y_min          = -63,
+	})
+
+	minetest.register_ore({
+		ore_type       = "scatter",
+		ore            = "default:stone_with_copper",
+		wherein        = "default:stone",
+		clust_scarcity = 10 * 10 * 10, -- 9*9*9
+		clust_num_ores = 7, -- 5
+		clust_size     = 6, -- 3
+		y_max          = -64,
 		y_min          = -31000,
 	})
 
@@ -644,8 +718,8 @@ function default.register_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 10 * 10 * 10,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -655,9 +729,9 @@ function default.register_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 4,
-		clust_size     = 3,
-		y_max          = -64,
+		clust_num_ores = 5, -- 4
+		clust_size     = 6, -- 3
+		y_max          = -32,
 		y_min          = -127,
 	})
 
@@ -666,79 +740,9 @@ function default.register_ores()
 		ore            = "default:stone_with_tin",
 		wherein        = "default:stone",
 		clust_scarcity = 10 * 10 * 10,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = -128,
-		y_min          = -31000,
-	})
-
-	-- Copper
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_copper",
-		wherein        = "default:stone",
-		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_copper",
-		wherein        = "default:stone",
-		clust_scarcity = 12 * 12 * 12,
-		clust_num_ores = 4,
-		clust_size     = 3,
-		y_max          = -64,
-		y_min          = -127,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_copper",
-		wherein        = "default:stone",
-		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -128,
-		y_min          = -31000,
-	})
-
-	-- Iron
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
-		wherein        = "default:stone",
-		clust_scarcity = 9 * 9 * 9,
-		clust_num_ores = 12,
-		clust_size     = 3,
-		y_max          = 31000,
-		y_min          = 1025,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
-		wherein        = "default:stone",
-		clust_scarcity = 7 * 7 * 7,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -128,
-		y_min          = -255,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:stone_with_iron",
-		wherein        = "default:stone",
-		clust_scarcity = 12 * 12 * 12,
-		clust_num_ores = 29,
-		clust_size     = 5,
-		y_max          = -256,
 		y_min          = -31000,
 	})
 
@@ -749,8 +753,8 @@ function default.register_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -759,11 +763,11 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
-		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -256,
-		y_min          = -511,
+		clust_scarcity = 14 * 14 * 14, -- 15*15*15
+		clust_num_ores = 4, -- 3
+		clust_size     = 6, -- 2
+		y_max          = -64,
+		y_min          = -255,
 	})
 
 	minetest.register_ore({
@@ -771,9 +775,9 @@ function default.register_ores()
 		ore            = "default:stone_with_gold",
 		wherein        = "default:stone",
 		clust_scarcity = 13 * 13 * 13,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -512,
+		clust_num_ores = 6, -- 5
+		clust_size     = 6, -- 3
+		y_max          = -256,
 		y_min          = -31000,
 	})
 
@@ -785,7 +789,7 @@ function default.register_ores()
 		wherein        = "default:stone",
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
-		clust_size     = 3,
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -794,11 +798,11 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_mese",
 		wherein        = "default:stone",
-		clust_scarcity = 18 * 18 * 18,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -512,
-		y_min          = -1023,
+		clust_scarcity = 16 * 16 * 16, -- 18*18*18
+		clust_num_ores = 4, -- 3
+		clust_size     = 6, -- 2
+		y_max          = -64,
+		y_min          = -255,
 	})
 
 	minetest.register_ore({
@@ -807,8 +811,8 @@ function default.register_ores()
 		wherein        = "default:stone",
 		clust_scarcity = 14 * 14 * 14,
 		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -1024,
+		clust_size     = 6, -- 3
+		y_max          = -256,
 		y_min          = -31000,
 	})
 
@@ -819,8 +823,8 @@ function default.register_ores()
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 4,
-		clust_size     = 3,
+		clust_num_ores = 6, -- 4
+		clust_size     = 6, -- 3
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -829,11 +833,11 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
-		clust_scarcity = 17 * 17 * 17,
-		clust_num_ores = 4,
-		clust_size     = 3,
-		y_max          = -1024,
-		y_min          = -2047,
+		clust_scarcity = 16 * 16 * 16, -- 17*17*17
+		clust_num_ores = 7, -- 4
+		clust_size     = 6, -- 3
+		y_max          = -128,
+		y_min          = -255,
 	})
 
 	minetest.register_ore({
@@ -841,9 +845,9 @@ function default.register_ores()
 		ore            = "default:stone_with_diamond",
 		wherein        = "default:stone",
 		clust_scarcity = 15 * 15 * 15,
-		clust_num_ores = 4,
-		clust_size     = 3,
-		y_max          = -2048,
+		clust_num_ores = 6, -- 4
+		clust_size     = 6, -- 3
+		y_max          = -256,
 		y_min          = -31000,
 	})
 
@@ -853,9 +857,9 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:mese",
 		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
+		clust_scarcity = 30 * 30 * 30, -- 36*36*36
+		clust_num_ores = 5, -- 3
+		clust_size     = 6, -- 2
 		y_max          = 31000,
 		y_min          = 1025,
 	})
@@ -864,21 +868,10 @@ function default.register_ores()
 		ore_type       = "scatter",
 		ore            = "default:mese",
 		wherein        = "default:stone",
-		clust_scarcity = 36 * 36 * 36,
-		clust_num_ores = 3,
-		clust_size     = 2,
-		y_max          = -2048,
-		y_min          = -4095,
-	})
-
-	minetest.register_ore({
-		ore_type       = "scatter",
-		ore            = "default:mese",
-		wherein        = "default:stone",
-		clust_scarcity = 28 * 28 * 28,
-		clust_num_ores = 5,
-		clust_size     = 3,
-		y_max          = -4096,
+		clust_scarcity = 28 * 28 * 28, -- 36*36*36
+		clust_num_ores = 6, -- 3
+		clust_size     = 6, -- 2
+		y_max          = -1024,
 		y_min          = -31000,
 	})
 end
