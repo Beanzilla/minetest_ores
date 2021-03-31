@@ -1,3 +1,13 @@
+# Minetest Ores
+
+This is a modified version of Minetest Game.
+
+This increases chances to encounter some kind of ore while mining thus increasing the fun!
+
+This game was modified for small servers will low player counts (Anything above 10 should seek to use Minetest Game rather than Minetest Ores)
+
+I will need to manually update this as Minetest and Minetest Game are updated so expect no immediate release updates.
+
 # Minetest Game
 
 The default game bundled in the Minetest engine.  
